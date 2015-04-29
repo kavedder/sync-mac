@@ -12,4 +12,7 @@ SRC_FILE=$1
 HOST=vergil.u.washington.edu
 URL=${user}@${HOST}:/da00/d24/$user/public_html/files/
 
-/usr/bin/rsync -ratlz --rsh="/usr/local/bin/sshpass -p $password ssh -o StrictHostKeyChecking=no -l $user" --delete $SRC_FILE $URL && afplay "/System/Library/Sounds/Purr.aiff"
+# LINE 1: sync to server
+# LINE 2: play a plinky noise
+/usr/bin/rsync -ratlz --rsh="/usr/local/bin/sshpass -p $password ssh -o StrictHostKeyChecking=no -l $user" --delete $SRC_FILE $URL \
+    && afplay "/System/Library/Sounds/Purr.aiff"
