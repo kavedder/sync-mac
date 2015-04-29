@@ -38,7 +38,7 @@ To set this up, while logged into vergil, run:
 mkdir -p ~/public_html/files
 ```
 
-If you want to be able to navigate to http://students.washington.edu/<username>/files/ and see a directory structure of the synced folder, run the following:
+If you want to be able to navigate to http://students.washington.edu/$USERNAME/files/ and see a directory structure of the synced folder, run the following:
 
 ```
 echo "Options +Indexes" >> ~/public_html/files/.htaccess
